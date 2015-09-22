@@ -1,6 +1,3 @@
-# add1516-hector
-ASIR - Administración de Sistemas Operativos
-
 # Actividad de prueba 
 
 Esta es una actividad de prueba con imagen y texto.
