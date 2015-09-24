@@ -4,8 +4,8 @@ Esta es una actividad de prueba con imagen y texto.
 
 > Esto es una nota!
 
-consultar la imagen
 ![imagen] (./imagen.png)
+consultar la imagen
 
 Como podemos ver en la imagen bla bla bla...
 
