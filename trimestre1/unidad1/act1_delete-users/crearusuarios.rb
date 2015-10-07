@@ -6,8 +6,7 @@ fichero=`cat userslist.txt`
 usuarios=fichero.split("\n")
 
 usuarios.each do |usuario|
-  system("userdel -r #{usuario}")
-  puts "Usuario #{usuario} borrado correctamente"
+  system("useradd -m -s /bin/bash #{usuario}")
+  puts "Usuario #{usuario} creado correctamente"
 end
-
 
