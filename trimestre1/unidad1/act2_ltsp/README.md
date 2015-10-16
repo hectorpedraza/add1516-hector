@@ -14,7 +14,7 @@ Para que el sistema funcione, la máquina servidor y las máquinas cliente tiene
 
 Instalamos la máquina virtual con las configuraciones por defecto. Una vez concluya la instalación ejecutaremos algunos comandos para resumir la instalación que se ha realizado.
 
-![imagen101] (./imagenes/1-01-comandos_lubuntu.png)
+![imagen101] (./imagenes/1-01-comandos_ubuntu.png)
 
 A continuación vamos a crear tres usuarios, que serán los que posteriormente accedan a los clientes ligeros.
 
