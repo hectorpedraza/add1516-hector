@@ -1,0 +1,5 @@
+pedro:gomez:pedro@gmail.com:10/05/94:add
+luis:hernandez::12/01/90:add
+kevin:perera:kevin@gmail.com:6/12/88:delete
+jose:perez:jose@gmail.com:21/02/98:delete
+

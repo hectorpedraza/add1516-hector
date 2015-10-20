@@ -1,21 +1,40 @@
-# !/usr/bin/ruby
-# !encoding: utf-8
+#!/usr/bin/ruby
+#!encoding: utf-8
 
-usuario=`whoami`
+idcompleto=`id -u`
 
-if usuario != "root"
+id=idcompleto.to_i
+
+if id != 0
   puts "Tiene que ser usuario root"
   exit
 end
 
+=begin
+# ALTERNATIVA PARA UTILIZAR NOMBRE EN VEZ DE UID
+usuariocompleto = `whoami`
+usuario = usuariocompleto.chop
+
+if usuario != "root"
+...
+=end
+
 fichero=`cat userslist.txt`
-filas=fichero.split("\n")
+
+filas = fichero.split("\n")
 
 filas.each do |fila|
-  datos=fila.split(":")
-  if datos[-1] == "add"
-    system("useradd -m -s /bin/bash #{campos[0]})
+  campos=fila.split(":")
+  if campos[2] != ""
+    if campos[-1] == "add"
+	  puts "Añadiendo el usuario #{campos[0]}"
+      system("useradd -m -s /bin/bash #{campos[0]}")
+    else if campos[-1] == "delete"
+          puts "Borrando el usuario #{campos[0]}"
+          system("userdel -r #{campos[0]}")
+		end
+    end
   else
-    system("userdel -r #{campos[0]})
-  end 
+    puts "El cliente #{campos[0]} no tiene correo"
+  end
 end
