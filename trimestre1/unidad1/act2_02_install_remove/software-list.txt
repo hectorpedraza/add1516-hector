@@ -1,0 +1,4 @@
+geany:install
+tree:remove
+dos2unix:r
+git:i
