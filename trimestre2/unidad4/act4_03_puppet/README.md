@@ -70,9 +70,9 @@ Creamos la carpeta `/etc/puppet/files` donde guardaremos documentos que queramos
 ![imagen203](./imagenes/2-03-directorio_puppet.png)
 
 Luego creamos los ficheros `site.pp`, `readme.txt` y `hostlinux1.pp`.
-*El fichero `readme.txt` incluirá texto para mostrar en el equipo al que lo incluyamos.
-*El fichero `site.pp` es un fichero de puppet donde incluiremos los hosts que conectarán con el master y los ficheros de configuración que cargarán en cada caso.
-*El fichero `hostlinux1.pp` será el fichero de configuración para el cliente OpenSUSE. 
+- El fichero `readme.txt` incluirá texto para mostrar en el equipo al que lo incluyamos.
+- El fichero `site.pp` es un fichero de puppet donde incluiremos los hosts que conectarán con el master y los ficheros de configuración que cargarán en cada caso.
+- El fichero `hostlinux1.pp` será el fichero de configuración para el cliente OpenSUSE. 
 
 El contenido de estos ficheros es el que sigue.
 
@@ -133,7 +133,7 @@ El contenido del fichero de definición es el que sigue:
 
 Para terminar vamos a configurar el cliente windows. 
 
-Vamos a la página de puppet y descargamos el cliente. La versión que descarguemos debe coincidir con la que tengamos instalada en el máster. Para averiguar la versión del puppet podemos ejecutar el comando `facter`.
+Vamos a la página de puppet y descargamos el cliente. La versión que descarguemos debe coincidir con la que tengamos instalada en el máster. Para averiguar la versión del puppet instalada en el máster podemos ejecutar el comando `facter`.
 
 Descargamos la versión correspondiente y ejecutamos el instalador. Lo único que tenemos que indicar es el nombre del máster.
 
@@ -179,3 +179,10 @@ Ejecutamos el comando del agente y comprobamos que los usuarios se han creado co
 
 ## 7. Conclusiones
 
+Las herramientas de administración de la configuración aportan a los administradores de sistemas la capacidad de administrar una gran cantidad de máquinas de manera simultánea, evitando la tediosa tarea de tener que ir aplicando las configuraciones individualmente por todos los equipos que la requieran.
+
+Teniendo estas aplicaciones, únicamente requerimos de un máster y, siempre que el cliente tenga el agente correspondiente habilitado (en el caso de alguna de las herramientas ni siquiera eso), se irán realizando automáticamente las configuraciones oportunas. La única complejidad que pueden presentar este tipo de herramientas es el uso de un lenguaje de programación (generalmente ruby o python) para escribir todos los ficheros de configuración. Esto hace necesario que los administradores que quieran utilizarlas tomen contacto con los lenguajes de programación de scripts.
+
+Como aportación a la actividad, sería interesante tocar, aunque sea ligeramente, otras aplicaciones del estilo, como por ejemplo Chef o Ansible, y buscar alguna diferencia entre ellas que nos permita tener una idea de cuál elegir en el caso de que se vaya a implementar un caso real.
+
+También sería interesante, en caso de que hubiera el tiempo necesario para ello, realizar una configuración completa de una máquina, incluyendo creado y borrado de usuarios, de programas, de configuraciones complejas... y poder comprobar la cantidad de aspectos que se pueden gestionar con este tipo de herramientas.
