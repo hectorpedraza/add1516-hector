@@ -174,18 +174,16 @@ Para verificar que efectivamente el servidor Apache ha sido instalado e iniciado
 
 Enlace de interés:
 
-    Crear un entorno de desarrollo con vagrant y puppet
-    friendsofvagrant.github.io -> Puppet Provisioning
-
-Veamos imágenes de ejemplo suministradas por Aarón Gonźalez Díaz:
+- [Crear un entorno de desarrollo con vagrant y puppet](http://developerlover.com/crear-un-entorno-de-desarrollo-con-vagrant-y-puppet/)
+- friendsofvagrant.github.io -> Puppet Provisioning
 
 Vagrantfile configurado con puppet:
 
-vagranfile-puppet
+![imagen404](./imagenes/4-04-puppet_vagrantfile.png)
 
 Fichero de configuración de puppet:
 
-vagran-puppet-pp-file
+![imagen405](./imagenes/4-05-packages.png)
 
 Veamos otros ejemplo:
 
@@ -196,10 +194,11 @@ Veamos otros ejemplo:
       end
     end
 
-En el fichero apache2.pp, estarán las órdenes puppet para instalar y configurar el servicio web apache2.
+    En el fichero apache2.pp, estarán las órdenes puppet para instalar y configurar el servicio web apache2.
 
-En nuestro caso vamos a instalar una serie de paquetes distintos del apache, ya que dicha herramienta se encuentra configurada mediante el script y podemos combinar ambas funciones:
+Cuando tengamos creada la configuración puppet levantamos la máquina (si ya hay una previa hay que destruirla o ejecutar un reload) y comprobamos que se instalan los paquetes indicados:
 
+![imagen406](./imagenes/4-06-puppet_funciona.png)
 
 
 ### 5. Otras cajas, nuestras cajas
