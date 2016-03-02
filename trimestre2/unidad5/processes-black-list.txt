@@ -1,0 +1,4 @@
+chromium:kill
+geany:notify
+libreoffice:kill
+ping:notify
