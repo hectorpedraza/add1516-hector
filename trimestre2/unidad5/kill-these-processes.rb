@@ -49,9 +49,18 @@ fichero=`cat processes-black-list.txt`
 
 filas = fichero.split("\n")
 
+while File.exists?("state.running") do
+  filas.each do |fila|
+    procesarFila(fila)
+  end
+  sleep(5)
+end
+
+=begin
 while `ls |grep state.running` != "" do 
   filas.each do |fila|
     procesarFila(fila)
   end
   sleep(5)
 end
+=end
